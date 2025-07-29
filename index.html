@@ -45,7 +45,7 @@
             width: 100%;
         }
         
-        .header h1 {
+        .header h2 {
             font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 25px;
@@ -191,49 +191,87 @@
             font-size: 1.4rem;
         }
         
-        .opt-out-box {
+        .compliance-box {
             background: linear-gradient(135deg, #fff3cd 0%, #fffbf0 100%);
             border: 3px solid #ffeaa7;
             border-radius: 20px;
-            padding: 50px;
+            padding: 40px;
             margin: 40px 0;
-            text-align: center;
-            position: relative;
             box-shadow: 0 8px 25px rgba(0,0,0,0.08);
         }
         
-        .opt-out-box::before {
-            content: "✋";
-            font-size: 3rem;
-            display: block;
-            margin-bottom: 25px;
-        }
-        
-        .opt-out-box h3 {
+        .compliance-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
             color: #856404;
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            font-weight: 700;
-        }
-        
-        .opt-out-box p {
-            color: #856404;
-            font-size: 1.3rem;
-            margin-bottom: 0;
             font-weight: 500;
-            line-height: 1.6;
+            margin-bottom: 20px;
         }
         
-        .stop-command {
-            background: #856404;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
+        .compliance-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .compliance-box a {
+            color: #667eea !important;
+            text-decoration: underline !important;
+            font-weight: 600;
+        }
+        
+        .example-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid #bbdefb;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .example-box h3 {
+            color: #2c3e50;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
             font-weight: 700;
-            font-size: 1.3rem;
-            display: inline-block;
-            margin: 20px 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        .example-box blockquote {
+            background: #fff;
+            border-left: 5px solid #667eea;
+            padding: 20px 25px;
+            border-radius: 12px;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 0;
+        }
+        
+        .legal-links {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .legal-links p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #495057;
+        }
+        
+        .legal-links p:last-child {
+            margin-bottom: 0;
+            font-size: 1rem;
+            color: #6c757d;
+        }
+        
+        .legal-links a {
+            color: #667eea !important;
+            text-decoration: underline !important;
+            font-weight: 600;
         }
         
         .contact-box {
@@ -301,7 +339,7 @@
                 padding: 60px 30px;
             }
             
-            .header h1 {
+            .header h2 {
                 font-size: 2.8rem;
             }
             
@@ -356,7 +394,7 @@
                 padding: 50px 20px;
             }
             
-            .header h1 {
+            .header h2 {
                 font-size: 2.4rem;
             }
             
@@ -394,12 +432,20 @@
 <body>
     <div class="full-width-container">
         <header class="header">
-            <h1>How & Why We Use SMS</h1>
+            <h2>Heads Up About Texts from Kozbotix 📱</h2>
             <div class="company">KOZBOTIX</div>
-            <p class="subtext">KOZBOTIX uses Twilio to send SMS messages only to users who have explicitly opted in through our website forms, demo bookings, or service activation process.</p>
+            <p class="subtext">We use text messages to keep you in the loop about your account activity, updates, and the occasional marketing message from Kozbotix. We won't blow up your phone — promise.</p>
         </header>
         
         <main class="content">
+            <section class="section">
+                <div class="compliance-box">
+                    <p>By submitting your phone number through any Kozbotix form, you consent to receive automated promotional and transactional messages from Kozbotix. Message frequency varies. Message and data rates may apply. Consent is not a condition of purchase.</p>
+                    
+                    <p>You may opt out at any time by replying <strong>STOP</strong>. For assistance, reply <strong>HELP</strong> or contact us at <a href="mailto:support@kozbotix.com">support@kozbotix.com</a>.</p>
+                </div>
+            </section>
+            
             <section class="section">
                 <div class="reasons-box">
                     <h3>Common Reasons You May Receive a Message</h3>
@@ -430,9 +476,9 @@
             </section>
             
             <section class="section">
-                <div class="opt-out-box">
-                    <h3>Want to stop receiving texts?</h3>
-                    <p>You can opt out of SMS messages at any time by replying <span class="stop-command">STOP</span> to any message from us. You'll receive immediate confirmation that you've been removed from our SMS list.</p>
+                <div class="example-box">
+                    <h3>Example Message</h3>
+                    <blockquote>"Hey, it's Kozbotix. Your automation setup is ready. Need help? Reply HELP or visit kozbotix.com."</blockquote>
                 </div>
             </section>
             
@@ -450,6 +496,13 @@
                             <a href="https://www.kozbotix.com" target="_blank" rel="noopener noreferrer">www.kozbotix.com</a>
                         </div>
                     </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="legal-links">
+                    <p>For more details, view our full <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Service</a>.</p>
+                    <p><em>Last updated: July 29, 2025</em></p>
                 </div>
             </section>
         </main>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KOZBOTIX SMS disclosure - Learn about our opt-in SMS messaging practices and privacy policies.">
+    <title>SMS Disclosure - KOZBOTIX</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+        
+        .full-width-container {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background: #ffffff;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+            letter-spacing: -0.02em;
+        }
+        
+        .company {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            opacity: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 0.05em;
+        }
+        
+        .subtext {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 1;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            line-height: 1.7;
+        }
+        
+        .content {
+            padding: 80px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+        }
+        
+        .section p {
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #34495e;
+            font-weight: 400;
+        }
+        
+        .reasons-box {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaf6 100%);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px 0;
+            border: 2px solid #e8eaf6;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .reasons-box h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 35px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .reasons-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .reasons-list li {
+            padding: 18px 0 18px 50px;
+            position: relative;
+            font-size: 1.15rem;
+            color: #34495e;
+            border-bottom: 1px solid #f0f0f8;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        .reasons-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .reasons-list li::before {
+            content: "📱";
+            position: absolute;
+            left: 0;
+            top: 18px;
+            font-size: 1.4rem;
+        }
+        
+        .privacy-box {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0fff0 100%);
+            border-radius: 20px;
+            padding: 50px;
+            border-left: 8px solid #28a745;
+            margin: 40px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .privacy-box h2::before {
+            background: #28a745;
+        }
+        
+        .privacy-list {
+            list-style: none;
+            margin-top: 30px;
+            padding: 0;
+        }
+        
+        .privacy-list li {
+            padding: 18px 0 18px 50px;
+            position: relative;
+            font-size: 1.15rem;
+            color: #2d5a2d;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .privacy-list li::before {
+            content: "🔒";
+            position: absolute;
+            left: 0;
+            top: 18px;
+            font-size: 1.4rem;
+        }
+        
+        .opt-out-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #fffbf0 100%);
+            border: 3px solid #ffeaa7;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .opt-out-box::before {
+            content: "✋";
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 25px;
+        }
+        
+        .opt-out-box h3 {
+            color: #856404;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .opt-out-box p {
+            color: #856404;
+            font-size: 1.3rem;
+            margin-bottom: 0;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        .stop-command {
+            background: #856404;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            display: inline-block;
+            margin: 20px 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-item .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .contact-item a {
+            color: #667eea !important;
+            text-decoration: underline !important;
+            font-weight: 600;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .contact-item a:hover {
+            color: #764ba2 !important;
+            text-decoration: underline !important;
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .footer-text {
+            font-size: 1.1rem;
+            color: #bdc3c7;
+            line-height: 1.8;
+            font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header {
+                padding: 60px 30px;
+            }
+            
+            .header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .company {
+                font-size: 1.6rem;
+            }
+            
+            .subtext {
+                font-size: 1.2rem;
+            }
+            
+            .content {
+                padding: 50px 30px;
+            }
+            
+            .section h2 {
+                font-size: 1.8rem;
+                padding-left: 25px;
+            }
+            
+            .section h2::before {
+                width: 5px;
+                height: 35px;
+            }
+            
+            .reasons-box,
+            .privacy-box,
+            .opt-out-box,
+            .contact-box {
+                padding: 35px 25px;
+                border-radius: 15px;
+            }
+            
+            .reasons-list li,
+            .privacy-list li {
+                padding-left: 40px;
+                font-size: 1.05rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .footer {
+                padding: 40px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 50px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2.4rem;
+            }
+            
+            .company {
+                font-size: 1.4rem;
+            }
+            
+            .subtext {
+                font-size: 1.1rem;
+            }
+            
+            .content {
+                padding: 40px 20px;
+            }
+            
+            .section h2 {
+                font-size: 1.6rem;
+            }
+            
+            .reasons-box,
+            .privacy-box,
+            .opt-out-box,
+            .contact-box {
+                padding: 30px 20px;
+            }
+            
+            .reasons-list li,
+            .privacy-list li {
+                padding-left: 35px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="full-width-container">
+        <header class="header">
+            <h1>How & Why We Use SMS</h1>
+            <div class="company">KOZBOTIX</div>
+            <p class="subtext">KOZBOTIX uses Twilio to send SMS messages only to users who have explicitly opted in through our website forms, demo bookings, or service activation process.</p>
+        </header>
+        
+        <main class="content">
+            <section class="section">
+                <div class="reasons-box">
+                    <h3>Common Reasons You May Receive a Message</h3>
+                    <ul class="reasons-list">
+                        <li>Appointment confirmations for scheduled demos or consultations</li>
+                        <li>Support replies to your questions or technical issues</li>
+                        <li>AI agent follow-up messages related to your automation setup</li>
+                        <li>Important account updates or service notifications</li>
+                        <li>System maintenance alerts that may affect your service</li>
+                        <li>Onboarding guidance for new KOZBOTIX features</li>
+                        <li>Reminders for upcoming calls or meetings you've scheduled</li>
+                        <li>Lead automation status updates and performance insights</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="privacy-box">
+                    <h2>Your Privacy Matters</h2>
+                    <p>We're committed to protecting your privacy and following all messaging regulations. Here's how we keep your information safe:</p>
+                    <ul class="privacy-list">
+                        <li><strong>We never sell your data</strong> - Your phone number and personal information remain confidential and are never shared with third parties</li>
+                        <li><strong>Messages are opt-in only</strong> - We exclusively send SMS to users who have explicitly requested to receive communications from us</li>
+                        <li><strong>We follow TCPA + 10DLC rules</strong> - Full compliance with Telephone Consumer Protection Act and Application-to-Person 10 Digit Long Code regulations</li>
+                        <li><strong>Secure Twilio infrastructure</strong> - All messages are transmitted through Twilio's enterprise-grade, encrypted messaging platform</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="opt-out-box">
+                    <h3>Want to stop receiving texts?</h3>
+                    <p>You can opt out of SMS messages at any time by replying <span class="stop-command">STOP</span> to any message from us. You'll receive immediate confirmation that you've been removed from our SMS list.</p>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="contact-box">
+                    <h2>Questions or Concerns?</h2>
+                    <p>If you have any questions about our SMS practices, need technical support, or want to learn more about our AI automation services, we're here to help.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="icon">📧</span>
+                            <a href="mailto:support@kozbotix.com">support@kozbotix.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">🌐</span>
+                            <a href="https://www.kozbotix.com" target="_blank" rel="noopener noreferrer">www.kozbotix.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer-text">
+                © 2025 KOZBOTIX. All rights reserved.<br>
+                Message and data rates may apply. Carrier charges may apply for text messages.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
